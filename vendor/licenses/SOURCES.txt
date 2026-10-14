@@ -1,0 +1,37 @@
+DEPENDENCIAS DE IMMORTAL SNAIL CHESS
+
+chess.js
+Versión: 1.4.0
+Licencia: BSD-2-Clause
+Repositorio: https://github.com/jhlywa/chess.js
+Paquete: https://registry.npmjs.org/chess.js/-/chess.js-1.4.0.tgz
+Integridad npm: sha512-BBJgrrtKQOzFLonR0l+k64A98NLemPwNsCskwb+29bRwobUa4iTm51E1kwGPbWXAcfdDa18nad6vpPPKPWarqw==
+Licencia incluida: chess-LICENSE
+
+Stockfish.js / Stockfish
+Paquete npm: stockfish@17.1.0
+Variante distribuida: lite-single, un solo hilo
+Licencia: GPL-3.0
+Repositorio: https://github.com/nmrugg/stockfish.js
+Paquete: https://registry.npmjs.org/stockfish/-/stockfish-17.1.0.tgz
+Integridad npm: sha512-LvxdOzngaMjwdDKkZML4riABX9EWUkIE2ZJUsNvR2yFnM4WLiM6ggEXcBY8v53dK7uAfbxdJFcBiKTIQyGg6Zg==
+Commit de fuentes: 602fd7e1a571a2be71f242942db90483731f2a1f
+Archivo de fuentes: stockfish-source.tar.gz, distribuido en partes.
+Las partes deben concatenarse en el orden del manifiesto.
+Manifiesto: stockfish-source-parts.json
+SHA-256 del archivo reconstruido: d524c31d77e2f929febe14e89bd3b20353a4269233a5010a006fd38be6c01d0a
+Partes incluidas:
+  stockfish-source.tar.gz.part001
+  stockfish-source.tar.gz.part002
+  stockfish-source.tar.gz.part003
+Instrucciones de reconstrucción: README.md del proyecto.
+Origen de fuentes: https://codeload.github.com/nmrugg/stockfish.js/tar.gz/602fd7e1a571a2be71f242942db90483731f2a1f
+Licencia incluida: stockfish-COPYING
+Binarios distribuidos sin modificaciones:
+  ../stockfish/stockfish-17.1-lite-single-03e3232.js
+  ../stockfish/stockfish-17.1-lite-single-03e3232.wasm
+
+El código fuente correspondiente y los avisos deben acompañar
+la redistribución. Si cambias los binarios, debes actualizar también
+las fuentes, scripts e instrucciones necesarios para reconstruirlos.
+Consulta el README principal y las instrucciones de compilación upstream.

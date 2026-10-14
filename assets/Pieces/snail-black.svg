@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="ebony" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#53645a"/>
+      <stop offset="0.5" stop-color="#29382f"/>
+      <stop offset="1" stop-color="#101b15"/>
+    </linearGradient>
+
+    <radialGradient id="shell" cx="32%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#687a6d"/>
+      <stop offset="0.55" stop-color="#34483b"/>
+      <stop offset="1" stop-color="#14231a"/>
+    </radialGradient>
+
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#465b4c"/>
+      <stop offset="1" stop-color="#142019"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sombra de apoyo -->
+  <ellipse cx="64" cy="115" rx="43" ry="5" fill="#111b16" opacity=".3"/>
+
+  <!-- Antenas -->
+  <g fill="url(#ebony)" stroke="#111c15"
+     stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M97 51 L94 34" fill="none"/>
+    <path d="M103 51 L115 36" fill="none"/>
+    <circle cx="94" cy="32" r="3.5"/>
+    <circle cx="116" cy="34" r="3.5"/>
+  </g>
+
+  <!-- Cuerpo y cuello -->
+  <path
+    d="M16 83
+       C25 82 30 76 42 74
+       L74 76
+       C83 75 88 67 89 59
+       C90 52 92 47 98 47
+       C105 47 109 51 109 57
+       C110 63 106 67 103 72
+       L97 83
+       C91 91 78 94 62 94
+       L28 94
+       C20 94 14 90 16 83 Z"
+    fill="url(#ebony)"
+    stroke="#111c15"
+    stroke-width="3"
+    stroke-linejoin="round"/>
+
+  <!-- Relieve inferior del cuerpo -->
+  <path d="M24 86 C44 91 74 89 90 81"
+        fill="none" stroke="#728574" stroke-width="2.5"
+        stroke-linecap="round"/>
+
+  <!-- Concha -->
+  <circle cx="54" cy="56" r="29"
+          fill="url(#shell)" stroke="#111c15" stroke-width="3"/>
+
+  <!-- Espiral tallada -->
+  <path
+    d="M72 72
+       C61 83 39 78 33 63
+       C27 48 38 32 54 33
+       C68 34 77 45 73 57
+       C70 68 57 72 48 66
+       C39 60 41 47 49 44
+       C57 41 65 47 63 54
+       C62 60 54 61 51 56"
+    fill="none"
+    stroke="#9baa91"
+    stroke-width="3.2"
+    stroke-linecap="round"/>
+
+  <!-- Brillo superior -->
+  <path d="M34 44 C38 34 51 29 62 33"
+        fill="none" stroke="#c3ceb8" stroke-opacity=".6"
+        stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Ojo y pequeño relieve de la cabeza -->
+  <circle cx="102" cy="56" r="2" fill="#d7dfc9"/>
+  <path d="M101 65 L106 63"
+        stroke="#84977e" stroke-width="2"
+        stroke-linecap="round"/>
+
+  <!-- Peana de pieza de ajedrez -->
+  <path d="M37 94 L91 94 L97 103 L31 103 Z"
+        fill="url(#base)" stroke="#111c15"
+        stroke-width="3" stroke-linejoin="round"/>
+
+  <rect x="27" y="101" width="74" height="7" rx="3"
+        fill="url(#ebony)" stroke="#111c15" stroke-width="3"/>
+
+  <path d="M29 107 L99 107 L106 114 L106 117 L22 117 L22 114 Z"
+        fill="url(#base)" stroke="#111c15"
+        stroke-width="3" stroke-linejoin="round"/>
+
+  <path d="M32 110 L96 110"
+        stroke="#98aa92" stroke-width="2"
+        stroke-linecap="round"/>
+</svg>

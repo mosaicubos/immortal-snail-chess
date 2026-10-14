@@ -1,0 +1,12 @@
+{
+  "filename": "stockfish-source.tar.gz",
+  "source_url": "https://codeload.github.com/nmrugg/stockfish.js/tar.gz/602fd7e1a571a2be71f242942db90483731f2a1f",
+  "commit": "602fd7e1a571a2be71f242942db90483731f2a1f",
+  "size": 147882277,
+  "sha256": "d524c31d77e2f929febe14e89bd3b20353a4269233a5010a006fd38be6c01d0a",
+  "parts": [
+    "stockfish-source.tar.gz.part001",
+    "stockfish-source.tar.gz.part002",
+    "stockfish-source.tar.gz.part003"
+  ]
+}

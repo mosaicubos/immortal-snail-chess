@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pruebas · Immortal Snail Chess</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    main { max-width: 960px; margin: 2rem auto; padding: 1rem; }
+    #results { padding-left: 1.5rem; line-height: 1.7; }
+    .pass { color: #b6e397; }
+    .fail { color: #ff9898; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pruebas automatizadas</h1>
+    <p>
+      <a href="../">Volver al juego</a>
+    </p>
+    <p class="muted">
+      La primera batería prueba reglas y la capa de IA con un evaluador
+      controlado. El botón adicional carga Stockfish WebAssembly real.
+    </p>
+
+    <button id="run-engine" type="button" disabled>
+      Probar Stockfish real con ambos colores
+    </button>
+
+    <p id="summary" role="status">Ejecutando…</p>
+    <ol id="results"></ol>
+  </main>
+  <script type="module" src="./tests.js"></script>
+</body>
+</html>

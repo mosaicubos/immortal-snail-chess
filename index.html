@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141b25">
+  <title>Immortal Snail Chess</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">CHESS · SURVIVAL · STRATEGY</p>
+      <h1>Immortal Snail Chess <span aria-hidden="true">🐌</span></h1>
+      <p>Yoyr opponent is not the only thing that goes for u</p>
+    </div>
+    <nav class="toolbar" aria-label="Controles de partida">
+      <button id="new-game" type="button">New game</button>
+      <button id="restart" type="button">Restart</button>
+      <button id="flip" type="button">Flip board</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="play-area" aria-label="Tablero y estado">
+      <div class="status-panel">
+        <span id="mode-label" class="tag">Two players</span>
+        <h2 id="status" aria-live="polite">White turn</h2>
+        <p id="engine-status" class="muted" aria-live="polite"></p>
+        <button id="retry-ai" type="button" hidden>Retry AI</button>
+      </div>
+
+      <div id="board" class="board" role="group"
+           aria-label="Tablero de ajedrez"></div>
+
+      <div class="snail-counters">
+        <div class="counter-card white-counter">
+          <strong>🐌 White snail</strong>
+          <span id="white-counter"></span>
+        </div>
+        <div class="counter-card black-counter">
+          <strong>🐌 Black snail</strong>
+          <span id="black-counter"></span>
+        </div>
+      </div>
+
+      <p id="notice" class="notice" role="status">
+        Choose one piece to see its legal moves
+      </p>
+    </section>
+
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>History</h2>
+        <p class="muted small">
+          ASN of the conventional play; subsequent activations of the scroll appear below.
+        </p>
+        <ol id="history" class="history" aria-label="Historial de movimientos"></ol>
+      </section>
+
+      <details class="panel help">
+        <summary>How to play</summary>
+        <ul>
+          <li>Each side has an immortal snail that pursues its own king.</li>
+          <li>
+            Every three moves of a color, only its snail activates.
+            The counters are independent.
+          </li>
+          <li>
+            It advances one square in any of the eight directions,
+            choosing the shortest Chebyshev distance.
+          </li>
+          <li>
+            In case of a tie, the configured order is used. By default:
+            column first, then row, in ascending order.
+          </li>
+          <li>
+            Upon reaching a square, it removes any piece located there.
+            Pieces neither block nor capture snails.
+          </li>
+          <li>
+            If it reaches its own king, that side loses.
+            If it captures the other king, it wins.
+          </li>
+          <li>
+            A piece can occupy a square containing a snail.
+            The capture is only resolved when the snail activates.
+          </li>
+          <li>
+            If it is already adjacent to the king, it reaches him. If it shares his square,
+            it remains there and captures him upon activating.
+          </li>
+          <li>
+            A move cannot leave its own king in check after
+            the activation, unless the activation has already ended the game.
+          </li>
+          <li>
+            Snail endings take priority over checkmate or draw
+            produced on that same move.
+          </li>
+          <li>
+            Conventional rules for promotion, castling,
+            and en passant are maintained. Conventional endings also apply.
+          </li>
+        </ul>
+        <p class="small muted">
+        The AI simulates the activations and immediate winning responses. Stockfish evaluates the resulting positions, but does not know this variant on its own. Optimal play is not guaranteed.
+        </p>
+      </details>
+
+      <!--<section class="panel small muted">
+        <p>Sin cuentas, servidores de juego ni servicios externos.</p>
+        <a href="./tests/">Abrir pruebas</a>
+        ·
+        <a href="./vendor/licenses/SOURCES.txt">Dependencias y fuentes</a>
+      </section>-->
+    </aside>
+  </main>
+
+  <dialog id="menu">
+    <form id="settings-form">
+      <p class="eyebrow">NEW GAME</p>
+      <h2>Choose your challenge</h2>
+
+      <label for="mode">Mode</label>
+      <select id="mode">
+        <option value="local">Two players in this device</option>
+        <option value="ai">Against the bot</option>
+      </select>
+
+      <fieldset id="ai-settings" disabled>
+        <legend>Bot options</legend>
+
+        <label for="color">Your color</label>
+        <select id="color">
+          <option value="w">White</option>
+          <option value="b">Black</option>
+        </select>
+
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty"></select>
+      </fieldset>
+
+      <p class="small muted">
+        The snails start on A4 and A5 with the default configuration.
+      </p>
+
+      <div class="dialog-actions">
+        <button id="cancel-menu" type="button">Cancel</button>
+        <button class="primary" type="submit">Start</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="promotion">
+    <h2>Promotion</h2>
+    <p>Choose the new piece</p>
+    <div id="promotion-options" class="promotion-options"></div>
+    <button id="cancel-promotion" type="button">Cancel</button>
+  </dialog>
+
+  <noscript>You need to activate JavaScript to play</noscript>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

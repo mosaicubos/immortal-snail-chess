@@ -1,0 +1,7 @@
+{
+  "package": "stockfish",
+  "version": "17.1.0",
+  "variant": "lite-single",
+  "worker": "stockfish/stockfish-17.1-lite-single-03e3232.js",
+  "wasm": "stockfish/stockfish-17.1-lite-single-03e3232.wasm"
+}
