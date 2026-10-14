@@ -395,3 +395,178 @@ fieldset:disabled { opacity: .5; }
   border: 5px solid #17332a80;
   background: transparent;
 }
+
+/* ==========================================================
+ Optional Ko-fi support card
+ ========================================================== */
+
+.support-card {
+ position: relative;
+ overflow: hidden;
+ padding: 1.25rem;
+ border-color: #567147;
+ background:
+ radial-gradient(
+ circle at top right,
+ rgb(168 220 133 / 12%),
+ transparent 65%
+ ),
+ var(--surface);
+ }
+
+.support-card-heading {
+ display: flex;
+ align-items: center;
+ gap: .85rem;
+ margin-bottom: 1rem;
+ }
+
+.support-card-heading > div {
+ min-width: 0;
+ }
+
+.support-icon {
+ flex: 0 0 46px;
+ display: grid;
+ place-items: center;
+ width: 46px;
+ height: 46px;
+ border: 1px solid rgb(168 220 133 / 28%);
+ border-radius: 14px;
+ color: var(--accent);
+ background: rgb(168 220 133 / 8%);
+ }
+
+.support-icon svg {
+ width: 32px;
+ height: 32px;
+ }
+
+.support-eyebrow {
+ margin: 0 0 .3rem;
+ color: var(--accent);
+ font-size: .62rem;
+ font-weight: 800;
+ line-height: 1.4;
+ letter-spacing: .14em;
+ }
+
+.support-card h2 {
+ margin: 0;
+ font-size: 1.1rem;
+ line-height: 1.3;
+ }
+
+.support-description,
+ .support-promise {
+ font-size: .87rem;
+ line-height: 1.65;
+ color: var(--muted);
+ }
+
+.support-description {
+ margin-bottom: 1rem;
+ }
+
+.support-goal {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: .3rem;
+ margin-bottom: 1rem;
+ padding: 1rem;
+ border: 1px solid rgb(168 220 133 / 18%);
+ border-radius: .75rem;
+ background: rgb(0 0 0 / 14%);
+ }
+
+.support-goal-label {
+ color: var(--muted);
+ font-size: .65rem;
+ font-weight: 750;
+ letter-spacing: .12em;
+ }
+
+.support-goal > strong {
+ color: var(--accent);
+ font-size: 2rem;
+ line-height: 1.2;
+ font-variant-numeric: tabular-nums;
+ }
+
+.support-goal-caption {
+ color: var(--text);
+ font-size: .8rem;
+ line-height: 1.5;
+ }
+
+.support-promise strong {
+ color: var(--text);
+ font-weight: 650;
+ }
+
+.support-button {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: .65rem;
+
+ width: 100%;
+ min-height: 48px;
+ padding: .85rem 1rem;
+
+ border: 1px solid transparent;
+ border-radius: .7rem;
+
+ background: var(--accent);
+ color: #172115;
+
+ font-size: .9rem;
+ font-weight: 800;
+ line-height: 1.4;
+ text-align: center;
+ text-decoration: none;
+
+ box-shadow: 0 5px 18px rgb(0 0 0 / 15%);
+ touch-action: manipulation;
+ }
+
+.support-button svg {
+ flex: 0 0 19px;
+ width: 19px;
+ height: 19px;
+ }
+
+.support-button:hover {
+ background: #bde99f;
+ color: #172115;
+ }
+
+.support-button:focus-visible {
+ outline: 3px solid var(--text);
+ outline-offset: 4px;
+ }
+
+.support-button:active {
+ background: #98ca77;
+ }
+
+.support-note {
+ margin: .8rem 0 0;
+ color: var(--muted);
+ font-size: .72rem;
+ line-height: 1.6;
+ text-align: center;
+ }
+
+@media (prefers-reduced-motion: no-preference) {
+ .support-button {
+ transition:
+ background .15s ease,
+ box-shadow .15s ease;
+ }
+
+ .support-button:hover {
+ box-shadow: 0 7px 24px rgb(168 220 133 / 12%);
+ }
+ }
