@@ -15,8 +15,8 @@ import {
 const $ = selector => document.querySelector(selector);
 
 const SNAIL_IMAGES = Object.freeze({
-  w: new URL("../assets/pieces/snail-white.svg", import.meta.url).href,
-  b: new URL("../assets/pieces/snail-black.svg", import.meta.url).href,
+  w: new URL("../assets/Pieces/snail-white.svg", import.meta.url).href,
+  b: new URL("../assets/Pieces/snail-black.svg", import.meta.url).href,
 });
 
 const elements = {
